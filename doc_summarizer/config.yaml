@@ -1,0 +1,29 @@
+watch_folder: "~/Documentos/Biblioteca_IA/Originales"
+storage_base_dir: "~/Documentos/Biblioteca_IA"
+
+subdirs:
+  originals: "Originales"
+  md: "md"
+  pdf: "pdf"
+
+# Modelo de Ollama
+ollama:
+  host: "http://localhost:11434"
+  model: "qwen2.5:7b"
+  temperature: 0.2
+  max_context_chars: 48000 # ~12k tokens aprox para el prompt
+
+# Extensiones de archivos monitoreadas
+allowed_extensions:
+  - ".pdf"
+  - ".docx"
+  - ".doc"
+  - ".txt"
+  - ".md"
+  - ".rtf"
+
+# Comportamiento
+settings:
+  organize_originals: false # El usuario coloca el archivo directamente en Originales, no se mueve
+  debounce_seconds: 3      # Espera a que la escritura/copia termine completamente
+  desktop_notifications: true
